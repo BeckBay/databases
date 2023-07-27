@@ -4,17 +4,17 @@ USE chat;
 
 CREATE TABLE IF NOT EXISTS messages (
   id int PRIMARY KEY AUTO_INCREMENT,
-  username VARCHAR(9),
-  message VARCHAR(20)
+  username VARCHAR(50),
+  message VARCHAR(1000),
+  roomname VARCHAR(50)
 );
 
 /* Create other tables and define schemas for them here! */
 
-CREATE TABLE friends (
+CREATE TABLE IF NOT EXISTS users (
   ID INT PRIMARY KEY AUTO_INCREMENT,
   friendName varchar(50)
-)
-
+);
 
 
 /*  Execute this file from the command line by typing:
